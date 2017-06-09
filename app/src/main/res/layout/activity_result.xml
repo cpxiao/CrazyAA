@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/game_view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/game_mode"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:textSize="32sp"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:gravity="center"
+            android:padding="30dp"
+            android:textSize="42sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/sub_title"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:textSize="24sp"/>
+
+
+        <Button
+            android:id="@+id/play_btn"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/btn_play"
+            android:scaleType="centerInside"
+            android:textSize="24sp"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_ads_50"/>
+</LinearLayout>
