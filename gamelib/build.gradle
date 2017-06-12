@@ -21,6 +21,10 @@ android {
 dependencies {
     compile 'com.android.support:appcompat-v7:25.2.0'
 
+    //Umeng统计 start
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    //Umeng统计 start
+
     /**
      * Ads Start
      */

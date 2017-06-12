@@ -8,8 +8,8 @@ android {
         applicationId "com.cpxiao.crazy.aa"
         minSdkVersion 9
         targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        versionCode 101
+        versionName "1.0.1"
     }
     buildTypes {
         release {
@@ -25,7 +25,7 @@ android {
 
     }
     productFlavors.all {
-//            flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
     }
     //修改生成的apk名字
     applicationVariants.all { variant ->

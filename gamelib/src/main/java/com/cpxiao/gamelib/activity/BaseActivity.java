@@ -18,10 +18,12 @@ import com.facebook.ads.AdSettings;
 import com.facebook.ads.AdSize;
 import com.facebook.ads.AdView;
 import com.google.android.gms.ads.AdRequest;
+import com.umeng.analytics.game.UMGameAgent;
 
 
 /**
  * @author cpxiao on 2017/3/1.
+ * @version cpxiao on 2017/6/12添加友盟统计
  */
 public class BaseActivity extends Activity {
     protected static final boolean DEBUG = Config.DEBUG;
@@ -41,6 +43,16 @@ public class BaseActivity extends Activity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+    }
+
+    public void onResume() {
+        super.onResume();
+        UMGameAgent.onResume(this);
+    }
+
+    public void onPause() {
+        super.onPause();
+        UMGameAgent.onPause(this);
     }
 
     @Override
@@ -210,6 +222,9 @@ public class BaseActivity extends Activity {
             Log.d(TAG, "addToLayout: ");
         }
         LinearLayout layout = (LinearLayout) findViewById(R.id.ads_layout);
+        if (view == null || layout == null) {
+            return;
+        }
         layout.removeAllViews();
         layout.addView(view);
     }
