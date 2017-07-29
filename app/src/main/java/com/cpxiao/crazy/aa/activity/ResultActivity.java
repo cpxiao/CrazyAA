@@ -8,9 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.cpxiao.gamelib.activity.BaseActivity;
-import com.cpxiao.crazy.aa.R;
+import com.cpxiao.R;
 import com.cpxiao.crazy.aa.mode.Extra;
+import com.cpxiao.gamelib.activity.BaseActivity;
 
 
 /**
@@ -37,7 +37,7 @@ public class ResultActivity extends BaseActivity implements View.OnClickListener
 
         initWidget();
         initWidgetData();
-
+        initAdMobAds50("ca-app-pub-4157365005379790/2403330318");
     }
 
     private void initWidget() {

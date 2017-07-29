@@ -8,8 +8,8 @@ android {
         applicationId "com.cpxiao.crazy.aa"
         minSdkVersion 9
         targetSdkVersion 23
-        versionCode 101
-        versionName "1.0.1"
+        versionCode 110
+        versionName "1.1.0"
     }
     buildTypes {
         release {
@@ -57,7 +57,23 @@ android {
 
 dependencies {
     compile project(':AndroidUtils:library')
-    compile project(':gamelib')
+
+    compile 'com.android.support:appcompat-v7:25.3.1'
+
+    /**
+     * Ads Start
+     */
+    //Umeng统计
+    compile 'com.umeng.analytics:analytics:latest.integration'
+
+    //Facebook广告
+    compile files('libs/AudienceNetwork_v4.7.jar')
+
+    //AdMob广告
+    compile 'com.google.firebase:firebase-ads:9.4.0'
+    /**
+     * Ads End
+     */
 
 //    compile 'com.android.support:recyclerview-v7:24.2.1'
     compile 'com.github.bumptech.glide:glide:3.7.0'

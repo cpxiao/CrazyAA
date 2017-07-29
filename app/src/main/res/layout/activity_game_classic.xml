@@ -29,11 +29,6 @@
             android:gravity="center"/>
     </LinearLayout>
 
-
-    <include
-        layout="@layout/layout_ads_50"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"/>
+    <include layout="@layout/layout_ads"/>
 
 </RelativeLayout>

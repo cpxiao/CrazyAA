@@ -5,7 +5,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.support.v4.content.ContextCompat;
 
-import com.cpxiao.crazy.aa.R;
+import com.cpxiao.R;
 import com.cpxiao.crazy.aa.mode.CenterCircle;
 import com.cpxiao.gamelib.view.BaseSurfaceViewFPS;
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.cpxiao.crazy.aa">
+          package="com.cpxiao">
 
     <!--facebook ad start-->
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -23,7 +23,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".activity.HomeActivity"
+            android:name=".crazy.aa.activity.HomeActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -32,19 +32,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.ClassicGameActivity"
+            android:name=".crazy.aa.activity.ClassicGameActivity"
             android:screenOrientation="portrait"/>
 
         <activity
-            android:name=".activity.ResultActivity"
+            android:name=".crazy.aa.activity.ResultActivity"
             android:screenOrientation="portrait"/>
 
         <activity
-            android:name=".activity.TimingGameActivity"
+            android:name=".crazy.aa.activity.TimingGameActivity"
             android:screenOrientation="portrait"/>
 
         <activity
-            android:name=".activity.TwoPlayerGameActivity"
+            android:name=".crazy.aa.activity.TwoPlayerGameActivity"
             android:screenOrientation="portrait"/>
 
         <meta-data

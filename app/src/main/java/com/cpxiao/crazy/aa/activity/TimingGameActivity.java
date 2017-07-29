@@ -8,9 +8,9 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
+import com.cpxiao.R;
 import com.cpxiao.androidutils.library.utils.PreferencesUtils;
 import com.cpxiao.androidutils.library.utils.ThreadUtils;
-import com.cpxiao.crazy.aa.R;
 import com.cpxiao.crazy.aa.imps.OnGameListener;
 import com.cpxiao.crazy.aa.mode.Extra;
 import com.cpxiao.crazy.aa.mode.LevelData;
@@ -36,6 +36,7 @@ public class TimingGameActivity extends BaseActivity implements OnGameListener {
         setContentView(R.layout.activity_game_timing);
 
         initWidget();
+        initAdMobAds50("ca-app-pub-4157365005379790/3325050810");
     }
 
     private void initWidget() {

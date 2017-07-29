@@ -5,12 +5,13 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 
+import com.cpxiao.R;
 import com.cpxiao.gamelib.Config;
-import com.cpxiao.gamelib.R;
 import com.facebook.ads.Ad;
 import com.facebook.ads.AdError;
 import com.facebook.ads.AdListener;
@@ -204,7 +205,7 @@ public class BaseActivity extends Activity {
         if (DEBUG) {
             adRequest = new AdRequest.Builder()
                     .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)// All emulators
-                    .addTestDevice("E89B10531C8CCB95C447A97261F6AA0E")//坚果
+                    .addTestDevice("67F59060394DB36B95B18F5EE5B5D735")//20170729 坚果Pro
                     .build();
         } else {
             adRequest = new AdRequest.Builder()
@@ -218,14 +219,26 @@ public class BaseActivity extends Activity {
     }
 
     private void addToLayout(View view) {
-        if (DEBUG) {
-            Log.d(TAG, "addToLayout: ");
+        if (view == null) {
+            return;
         }
+        removeFromParent(view);
+
         LinearLayout layout = (LinearLayout) findViewById(R.id.ads_layout);
-        if (view == null || layout == null) {
+        if (layout == null) {
             return;
         }
         layout.removeAllViews();
         layout.addView(view);
+    }
+
+    private void removeFromParent(View view) {
+        if (view == null) {
+            return;
+        }
+        ViewGroup parent = (ViewGroup) view.getParent();
+        if (parent != null) {
+            parent.removeView(view);
+        }
     }
 }

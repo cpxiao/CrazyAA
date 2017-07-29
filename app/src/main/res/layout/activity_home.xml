@@ -37,11 +37,11 @@
             android:text="@string/btn_time"/>
 
         <Button
-            android:id="@+id/btn_2player"
+            android:id="@+id/btn_two_players"
             style="@style/HomeBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/two_player"/>
+            android:text="@string/two_players"/>
 
         <Button
             android:id="@+id/btn_settings"
@@ -49,6 +49,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/settings"/>
+
+        <Button
+            android:id="@+id/btn_quit"
+            style="@style/HomeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_quit"/>
 
     </LinearLayout>
 

@@ -8,8 +8,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.cpxiao.R;
 import com.cpxiao.androidutils.library.utils.PreferencesUtils;
-import com.cpxiao.crazy.aa.R;
 import com.cpxiao.crazy.aa.imps.OnGameListener;
 import com.cpxiao.crazy.aa.mode.Extra;
 import com.cpxiao.crazy.aa.mode.LevelData;
@@ -35,7 +35,7 @@ public class ClassicGameActivity extends BaseActivity implements OnGameListener 
         }
 
         initWidget();
-
+        initAdMobAds50("ca-app-pub-4157365005379790/1261816645");
     }
 
     private void initWidget() {

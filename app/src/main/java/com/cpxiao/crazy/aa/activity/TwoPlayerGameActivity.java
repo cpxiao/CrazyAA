@@ -5,13 +5,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
+import com.cpxiao.R;
 import com.cpxiao.androidutils.library.utils.ThreadUtils;
-import com.cpxiao.gamelib.activity.BaseActivity;
-import com.cpxiao.crazy.aa.R;
 import com.cpxiao.crazy.aa.imps.OnTwoPlayerGameListener;
 import com.cpxiao.crazy.aa.mode.LevelData;
 import com.cpxiao.crazy.aa.views.GameViewWith2Player;
 import com.cpxiao.crazy.aa.views.RotateTextView;
+import com.cpxiao.gamelib.activity.BaseActivity;
 
 
 /**

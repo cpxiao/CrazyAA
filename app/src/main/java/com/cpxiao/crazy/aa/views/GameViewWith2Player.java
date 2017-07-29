@@ -8,10 +8,10 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.cpxiao.R;
+import com.cpxiao.crazy.aa.imps.OnTwoPlayerGameListener;
 import com.cpxiao.crazy.aa.mode.Circle;
 import com.cpxiao.crazy.aa.mode.LevelData;
-import com.cpxiao.crazy.aa.imps.OnTwoPlayerGameListener;
-import com.cpxiao.crazy.aa.R;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
 
