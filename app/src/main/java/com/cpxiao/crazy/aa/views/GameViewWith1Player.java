@@ -25,8 +25,7 @@ public class GameViewWith1Player extends GameView implements View.OnClickListene
     /**
      * 默认待插入针数量的最小值
      */
-    private static final int PLAYER_CIRCLE_COUNT_DEFAULT = 3;
-    private int mPlayerCircleCount = PLAYER_CIRCLE_COUNT_DEFAULT;
+    private int mPlayerCircleCount = 3;
     /**
      * 玩家待插入圆之间的间隔占半径比例
      */
@@ -104,11 +103,17 @@ public class GameViewWith1Player extends GameView implements View.OnClickListene
                 if (animationTime < 0 && mOnGameListener != null) {
                     mOnGameListener.onSuccess();
                 }
+                //                if (mOnGameListener != null) {
+                //                    mOnGameListener.onSuccess();
+                //                }
             } else if (mGameState == GAME_STATE_GAME_OVER) {
                 mAnimationCirclePaint.setColor(ContextCompat.getColor(getContext(), R.color.text_fail));
                 if (animationTime < 0 && mOnGameListener != null) {
                     mOnGameListener.onGameOver();
                 }
+                //                if (mOnGameListener != null) {
+                //                    mOnGameListener.onGameOver();
+                //                }
             }
         } else {
             super.timingLogic();
@@ -134,7 +139,7 @@ public class GameViewWith1Player extends GameView implements View.OnClickListene
     public void onClick(View v) {
         //加个锁防止timingLogic()方法导致数据错乱,初步看来有效果
         //20161030,不要锁mSurfaceHolder.getSurface(),低版本的手机会anr
-        synchronized (GameViewWith1Player.class.getSimpleName()) {
+        synchronized (TAG) {
             if (!isStarted && mOnGameListener != null) {
                 isStarted = true;
                 mOnGameListener.onGameStart();

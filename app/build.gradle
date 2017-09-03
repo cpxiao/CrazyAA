@@ -6,10 +6,10 @@ android {
 
     defaultConfig {
         applicationId "com.cpxiao.crazy.aa"
-        minSdkVersion 9
+        minSdkVersion 14
         targetSdkVersion 23
-        versionCode 110
-        versionName "1.1.0"
+        versionCode 121
+        versionName "1.2.1"
     }
     buildTypes {
         release {
@@ -63,20 +63,25 @@ dependencies {
     /**
      * Ads Start
      */
-    //Umeng统计
+    //友盟统计
     compile 'com.umeng.analytics:analytics:latest.integration'
-
     //Facebook广告
-    compile files('libs/AudienceNetwork_v4.7.jar')
-
+//    compile files('libs/AudienceNetwork_v4.7.jar')
+//    compile 'com.facebook.android:audience-network-sdk:4.+'
+    compile 'com.facebook.android:audience-network-sdk:4.25.0'
     //AdMob广告
-    compile 'com.google.firebase:firebase-ads:9.4.0'
+//    compile 'com.google.firebase:firebase-ads:9.4.0'
+    compile 'com.google.firebase:firebase-ads:11.0.0'
+    //ZAds SDK
+//    compile 'com.github.bumptech.glide:glide:3.7.0'//要放在前面几个库的后面
+//    compile 'com.github.bumptech.glide:glide:4.0.0-RC1'
     /**
      * Ads End
      */
 
+
 //    compile 'com.android.support:recyclerview-v7:24.2.1'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
+//    compile 'com.github.bumptech.glide:glide:3.7.0'
 }
 
 apply plugin: 'com.google.gms.google-services'

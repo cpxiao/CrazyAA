@@ -44,13 +44,13 @@
             android:id="@+id/count_down_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:angle="30000"
+            android:angle="10000"
             android:textSize="14sp"/>
 
 
     </LinearLayout>
 
-    <include layout="@layout/layout_ads"/>
+    <!--<include layout="@layout/layout_ads"/>-->
 </RelativeLayout>
 
 

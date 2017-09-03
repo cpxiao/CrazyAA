@@ -13,6 +13,7 @@ import static android.R.attr.angle;
  */
 public class CountDownTextView extends TimeTextView {
 
+    private boolean isTimeUp = false;//是否time up，防止多次回调timeUp()方法
     private OnTimeUpListener mOnTimeUpListener;
     private static final int[] mAttr = {angle};
     private static final int ATTR_ANDROID_ANGLE = 0;
@@ -25,30 +26,45 @@ public class CountDownTextView extends TimeTextView {
      */
     public CountDownTextView(Context context, long time) {
         super(context);
-        mTime = time;
-        setText(timeFormat(mTime));
+        setTimeMillis(time);
+        setText(timeFormat(time));
     }
 
     public CountDownTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
         TypedArray typedArray = context.obtainStyledAttributes(attrs, mAttr);
-        mTime = (long) typedArray.getFloat(ATTR_ANDROID_ANGLE, 0f);
+        long time = (long) typedArray.getFloat(ATTR_ANDROID_ANGLE, 0f);
+        setTimeMillis(time);
         typedArray.recycle();
 
-        setText(timeFormat(mTime));
+        setText(timeFormat(time));
+    }
+
+    /**
+     * 重置时间
+     *
+     * @param time time
+     */
+    public void resetTime(long time) {
+        pause();
+        super.setTimeMillis(time);
+        isTimeUp = false;
+        setText(timeFormat(time));
     }
 
     @Override
     protected void updateTime() {
-        mTime -= mInterval;
+        long time = getTimeMillis() - mInterval;
+        setTimeMillis(time);
     }
 
     @Override
     protected String timeFormat(long time) {
-        if (time <= 0) {
+        if (time < 0) {
             time = 0;
-            if (mOnTimeUpListener != null) {
+            if (!isTimeUp && mOnTimeUpListener != null) {
+                isTimeUp = true;
                 mOnTimeUpListener.timeUp();
             }
             cancelTimeTask();

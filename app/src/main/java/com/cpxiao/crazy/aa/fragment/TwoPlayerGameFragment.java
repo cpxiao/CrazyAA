@@ -1,8 +1,8 @@
-package com.cpxiao.crazy.aa.activity;
+package com.cpxiao.crazy.aa.fragment;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.FrameLayout;
 
 import com.cpxiao.R;
@@ -11,17 +11,13 @@ import com.cpxiao.crazy.aa.imps.OnTwoPlayerGameListener;
 import com.cpxiao.crazy.aa.mode.LevelData;
 import com.cpxiao.crazy.aa.views.GameViewWith2Player;
 import com.cpxiao.crazy.aa.views.RotateTextView;
-import com.cpxiao.gamelib.activity.BaseActivity;
-
+import com.cpxiao.gamelib.fragment.BaseFragment;
 
 /**
- * TwoPlayerGameActivity
- *
- * @author cpxiao on 2017/6/6.
+ * @author cpxiao on 2017/09/02.
  */
 
-public class TwoPlayerGameActivity extends BaseActivity implements OnTwoPlayerGameListener {
-
+public class TwoPlayerGameFragment extends BaseFragment implements OnTwoPlayerGameListener {
     /**
      * 多少分一局
      */
@@ -33,22 +29,31 @@ public class TwoPlayerGameActivity extends BaseActivity implements OnTwoPlayerGa
     private RotateTextView mTopPlayerMsgView;
     private RotateTextView mBottomPlayerMsgView;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game_2player);
+    public static TwoPlayerGameFragment newInstance(Bundle bundle) {
+        TwoPlayerGameFragment fragment = new TwoPlayerGameFragment();
+        if (bundle != null) {
+            fragment.setArguments(bundle);
+        }
+        return fragment;
+    }
 
-        mTopPlayerMsgView = (RotateTextView) findViewById(R.id.top_player_msg);
+    @Override
+    protected void initView(View view, Bundle savedInstanceState) {
+        mTopPlayerMsgView = (RotateTextView) view.findViewById(R.id.top_player_msg);
         mTopPlayerMsgView.setText("");
-        mBottomPlayerMsgView = (RotateTextView) findViewById(R.id.bottom_player_msg);
+        mBottomPlayerMsgView = (RotateTextView) view.findViewById(R.id.bottom_player_msg);
         mBottomPlayerMsgView.setText("");
 
-        mScoreView = (RotateTextView) findViewById(R.id.score_text_view);
+        mScoreView = (RotateTextView) view.findViewById(R.id.score_text_view);
         setScore();
 
-        mGameViewLayout = (FrameLayout) findViewById(R.id.game_view_layout);
+        mGameViewLayout = (FrameLayout) view.findViewById(R.id.game_view_layout);
         initGameView();
+    }
 
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_game_2player;
     }
 
     private void setScore() {
@@ -57,19 +62,14 @@ public class TwoPlayerGameActivity extends BaseActivity implements OnTwoPlayerGa
     }
 
     private void initGameView() {
+        Context context = getHoldingActivity();
         mGameViewLayout.removeAllViews();
         LevelData data = LevelData.getRandomData(0);
-        GameViewWith2Player view = new GameViewWith2Player(this, data);
+        GameViewWith2Player view = new GameViewWith2Player(context, data);
         view.setOnTwoPlayerGameListener(this);
         mGameViewLayout.addView(view);
     }
 
-
-    public static void comeToMe(Context context) {
-        Intent intent = new Intent(context, TwoPlayerGameActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        context.startActivity(intent);
-    }
 
     @Override
     public void onBottomPlayerWin() {
@@ -105,6 +105,4 @@ public class TwoPlayerGameActivity extends BaseActivity implements OnTwoPlayerGa
 
 
     }
-
-
 }

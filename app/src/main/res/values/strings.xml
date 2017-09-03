@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Crazy AA(2 Players)</string>
+    <string name="app_name">Crazy AA - 2 Players</string>
 
     <string name="btn_classic">Classic Mode</string>
     <string name="btn_time">Time Mode</string>
@@ -10,7 +10,7 @@
     <string name="play_again">Play Again</string>
     <string name="btn_level_list">Level List</string>
 
-    <string name="retry_level">Retry Level</string>
+    <string name="try_again">Try Again</string>
     <string name="next_level">Next Level</string>
     <string name="success">Success</string>
     <string name="fail">Fail</string>
@@ -19,6 +19,12 @@
     <string name="score">Score</string>
     <string name="home">Home</string>
 
-    <string name="you_win">You Win !</string>
-    <string name="you_lose">You Lose !</string>
+    <string name="you_win">You Win</string>
+    <string name="you_lose">You Lose</string>
+    <string name="time_up">Time Up</string>
+
+
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="quit_msg">Quit the Game?</string>
 </resources>

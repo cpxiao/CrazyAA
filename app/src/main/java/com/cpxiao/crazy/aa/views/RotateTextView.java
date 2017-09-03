@@ -7,7 +7,7 @@ import android.support.v7.widget.AppCompatTextView;
 import android.util.AttributeSet;
 import android.view.Gravity;
 
-import com.cpxiao.gamelib.Config;
+import com.cpxiao.AppConfig;
 
 import static android.R.attr.angle;
 
@@ -19,7 +19,7 @@ import static android.R.attr.angle;
 
 public class RotateTextView extends AppCompatTextView {
     private static final String TAG = RotateTextView.class.getSimpleName();
-    private static final boolean DEBUG = Config.DEBUG;
+    private static final boolean DEBUG = AppConfig.DEBUG;
 
     private static final int[] mAttr = {angle};
     private static final int ATTR_ANDROID_ANGLE = 0;

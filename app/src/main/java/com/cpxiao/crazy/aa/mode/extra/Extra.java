@@ -1,4 +1,4 @@
-package com.cpxiao.crazy.aa.mode;
+package com.cpxiao.crazy.aa.mode.extra;
 
 /**
  * Extra
@@ -20,6 +20,8 @@ public final class Extra {
          * 关卡
          */
         public static final String LEVEL = "LEVEL";
+
+        public static final String EXTRA_NAME_IS_SUCCESS = "EXTRA_NAME_IS_SUCCESS";
     }
 
     /**

@@ -18,27 +18,32 @@ import java.util.TimerTask;
  * 继续改进：将间隔改为29/31/33/37等随机毫秒，减少误差且可以模拟精确到毫秒
  *
  * @author cpxiao on 2017/6/6.
+ * @version cpxiao on 2017/9/2.重构变量mTime
  */
 public class TimeTextView extends AppCompatTextView {
 
+    /**
+     * 是否正在计时
+     */
     private boolean isTiming = false;
+
     /**
      * 时间，单位毫秒
      */
-    public long mTime = 0;
+    private long mTimeMillis = 0;
 
     /**
      * 间隔时间，单位毫秒
      */
-    protected int mInterval = 37;
-    private static final int mIntervalArray[] = {29, 31, 33, 37, 39, 41, 43, 47, 49};
+    protected long mInterval = 37;
+    private static final long mIntervalArray[] = {29, 31, 33, 37, 39, 41, 43, 47, 49};
 
     private Handler handler = new Handler(new Handler.Callback() {
         @Override
         public boolean handleMessage(Message msg) {
             switch (msg.what) {
                 case 1:
-                    setText(timeFormat(mTime));
+                    setText(timeFormat(mTimeMillis));
             }
             return true;
         }
@@ -62,9 +67,9 @@ public class TimeTextView extends AppCompatTextView {
     }
 
     private void init() {
-        setText(timeFormat(mTime));
+        setText(timeFormat(mTimeMillis));
         setGravity(Gravity.CENTER);
-        mInterval = getInterval();
+        mInterval = getRandomInterval();
         initTimeTask();
     }
 
@@ -86,7 +91,7 @@ public class TimeTextView extends AppCompatTextView {
 
     protected void updateTime() {
         if (isTiming) {
-            mTime += mInterval;
+            mTimeMillis += mInterval;
         }
     }
 
@@ -97,17 +102,13 @@ public class TimeTextView extends AppCompatTextView {
     }
 
     /**
-     * 获取时间间隔
+     * 获取随机时间间隔
      *
      * @return int
      */
-    public int getInterval() {
-        int interval = mInterval;
-        if (mIntervalArray != null) {
-            int index = ((int) (Math.random() * mIntervalArray.length)) % mIntervalArray.length;
-            interval = mIntervalArray[index];
-        }
-        return interval;
+    private long getRandomInterval() {
+        int index = ((int) (Math.random() * mIntervalArray.length)) % mIntervalArray.length;
+        return mIntervalArray[index];
     }
 
     /**
@@ -128,6 +129,7 @@ public class TimeTextView extends AppCompatTextView {
      */
     public void pause() {
         isTiming = false;
+        //
         cancelTimeTask();
     }
 
@@ -150,5 +152,11 @@ public class TimeTextView extends AppCompatTextView {
         }
     }
 
+    public void setTimeMillis(long timeMillis) {
+        mTimeMillis = timeMillis;
+    }
 
+    public long getTimeMillis() {
+        return mTimeMillis;
+    }
 }

@@ -23,7 +23,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity
-            android:name=".crazy.aa.activity.HomeActivity"
+            android:name=".crazy.aa.activity.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -31,21 +31,21 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity
-            android:name=".crazy.aa.activity.ClassicGameActivity"
-            android:screenOrientation="portrait"/>
+        <!--<activity-->
+            <!--android:name=".crazy.aa.activity.ClassicGameActivity"-->
+            <!--android:screenOrientation="portrait"/>-->
 
-        <activity
-            android:name=".crazy.aa.activity.ResultActivity"
-            android:screenOrientation="portrait"/>
+        <!--<activity-->
+            <!--android:name=".crazy.aa.activity.ResultActivity"-->
+            <!--android:screenOrientation="portrait"/>-->
 
-        <activity
-            android:name=".crazy.aa.activity.TimingGameActivity"
-            android:screenOrientation="portrait"/>
+        <!--<activity-->
+            <!--android:name=".crazy.aa.activity.TimingGameActivity"-->
+            <!--android:screenOrientation="portrait"/>-->
 
-        <activity
-            android:name=".crazy.aa.activity.TwoPlayerGameActivity"
-            android:screenOrientation="portrait"/>
+        <!--<activity-->
+            <!--android:name=".crazy.aa.activity.TwoPlayerGameActivity"-->
+            <!--android:screenOrientation="portrait"/>-->
 
         <meta-data
             android:name="UMENG_APPKEY"

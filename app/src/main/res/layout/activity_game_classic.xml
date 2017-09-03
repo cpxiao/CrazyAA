@@ -29,6 +29,6 @@
             android:gravity="center"/>
     </LinearLayout>
 
-    <include layout="@layout/layout_ads"/>
+    <!--<include layout="@layout/layout_ads"/>-->
 
 </RelativeLayout>
