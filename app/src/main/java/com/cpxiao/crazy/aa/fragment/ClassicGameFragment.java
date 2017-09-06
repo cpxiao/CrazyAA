@@ -16,13 +16,14 @@ import com.cpxiao.crazy.aa.imps.OnGameListener;
 import com.cpxiao.crazy.aa.mode.LevelData;
 import com.cpxiao.crazy.aa.mode.extra.Extra;
 import com.cpxiao.crazy.aa.views.GameViewWith1Player;
-import com.cpxiao.gamelib.fragment.BaseFragment;
+import com.cpxiao.gamelib.fragment.BaseZAdsFragment;
+import com.cpxiao.zads.core.ZAdPosition;
 
 /**
  * @author cpxiao on 2017/09/02.
  */
 
-public class ClassicGameFragment extends BaseFragment implements OnGameListener {
+public class ClassicGameFragment extends BaseZAdsFragment implements OnGameListener {
     private int mLevel = Extra.Key.LEVEL_DEFAULT;
 
     private TextView mLevelTitleTV;
@@ -38,6 +39,8 @@ public class ClassicGameFragment extends BaseFragment implements OnGameListener 
 
     @Override
     protected void initView(View view, Bundle savedInstanceState) {
+        loadZAds(ZAdPosition.POSITION_GAME);
+
         Bundle bundle = getArguments();
         Context context = getHoldingActivity();
         if (bundle != null) {

@@ -7,9 +7,9 @@ android {
     defaultConfig {
         applicationId "com.cpxiao.crazy.aa"
         minSdkVersion 14
-        targetSdkVersion 23
-        versionCode 121
-        versionName "1.2.1"
+        targetSdkVersion 25
+        versionCode 122
+        versionName "1.2.2"
     }
     buildTypes {
         release {
@@ -24,9 +24,11 @@ android {
         gp {}
 
     }
+
     productFlavors.all {
         flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
     }
+
     //修改生成的apk名字
     applicationVariants.all { variant ->
         variant.outputs.each { output ->
@@ -74,14 +76,13 @@ dependencies {
     compile 'com.google.firebase:firebase-ads:11.0.0'
     //ZAds SDK
 //    compile 'com.github.bumptech.glide:glide:3.7.0'//要放在前面几个库的后面
-//    compile 'com.github.bumptech.glide:glide:4.0.0-RC1'
+    compile 'com.github.bumptech.glide:glide:4.0.0-RC1'
     /**
      * Ads End
      */
 
 
 //    compile 'com.android.support:recyclerview-v7:24.2.1'
-//    compile 'com.github.bumptech.glide:glide:3.7.0'
 }
 
 apply plugin: 'com.google.gms.google-services'

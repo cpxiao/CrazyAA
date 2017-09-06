@@ -42,19 +42,19 @@ public final class Extra {
 
     }
 
-    /**
-     * GameMode
-     */
-    public class GameMode {
-        /**
-         * 经典模式
-         */
-        public static final int CLASSIC = 1;
-        /**
-         * 计时模式
-         */
-        public static final int TIMING = 2;
-
-    }
+//    /**
+//     * GameMode
+//     */
+//    public class GameMode {
+//        /**
+//         * 经典模式
+//         */
+//        public static final int CLASSIC = 1;
+//        /**
+//         * 计时模式
+//         */
+//        public static final int TIMING = 2;
+//
+//    }
 
 }

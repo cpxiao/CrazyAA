@@ -8,13 +8,14 @@ import android.widget.Button;
 import com.cpxiao.R;
 import com.cpxiao.androidutils.library.utils.PreferencesUtils;
 import com.cpxiao.crazy.aa.mode.extra.Extra;
-import com.cpxiao.gamelib.fragment.BaseFragment;
+import com.cpxiao.gamelib.fragment.BaseZAdsFragment;
+import com.cpxiao.zads.core.ZAdPosition;
 
 /**
  * @author cpxiao on 2017/09/02.
  */
 
-public class HomeFragment extends BaseFragment implements View.OnClickListener {
+public class HomeFragment extends BaseZAdsFragment implements View.OnClickListener {
 
     public static HomeFragment newInstance(Bundle bundle) {
         HomeFragment fragment = new HomeFragment();
@@ -26,6 +27,8 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
     @Override
     protected void initView(View view, Bundle savedInstanceState) {
+        loadZAds(ZAdPosition.POSITION_HOME);
+
         Button classic = (Button) view.findViewById(R.id.btn_classic);
         classic.setOnClickListener(this);
 

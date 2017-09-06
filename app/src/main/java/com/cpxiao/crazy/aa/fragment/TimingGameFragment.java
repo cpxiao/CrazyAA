@@ -18,13 +18,14 @@ import com.cpxiao.crazy.aa.mode.LevelData;
 import com.cpxiao.crazy.aa.mode.extra.Extra;
 import com.cpxiao.crazy.aa.views.CountDownTextView;
 import com.cpxiao.crazy.aa.views.GameViewWith1Player;
-import com.cpxiao.gamelib.fragment.BaseFragment;
+import com.cpxiao.gamelib.fragment.BaseZAdsFragment;
+import com.cpxiao.zads.core.ZAdPosition;
 
 /**
  * @author cpxiao on 2017/09/02.
  */
 
-public class TimingGameFragment extends BaseFragment implements OnGameListener {
+public class TimingGameFragment extends BaseZAdsFragment implements OnGameListener {
     private FrameLayout mGameViewLayout;
     private CountDownTextView mCountDownTextView;
     private TextView mScoreTextView;
@@ -42,9 +43,8 @@ public class TimingGameFragment extends BaseFragment implements OnGameListener {
 
     @Override
     protected void initView(View view, Bundle savedInstanceState) {
-        if (DEBUG) {
-            Log.d(TAG, "initView: ");
-        }
+        loadZAds(ZAdPosition.POSITION_BEST_SCORE);
+
         final Context context = getHoldingActivity();
         Button titleBarLeftBtn = (Button) view.findViewById(R.id.title_bar_left_btn);
         titleBarLeftBtn.setOnClickListener(new View.OnClickListener() {

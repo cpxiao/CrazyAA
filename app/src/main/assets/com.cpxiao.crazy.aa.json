@@ -1,0 +1,170 @@
+//{
+//  "ad_position": 0,
+//  "ad_type": 4,
+//  "ad_size": 100,
+//  "publish_id": "",
+//  "place_id": ""
+//}
+
+{
+  "msg": "",
+  "country": "CN",
+  "error": 0,
+  "data": {
+    "extra_data": {
+    },
+    "data": [
+      {
+        "ad_position": 1,
+        "ad_type": 1,
+        "ad_size": 100
+      },
+      {
+        "ad_position": 1,
+        "ad_type": 2,
+        "ad_size": 100,
+        "place_id": "ca-app-pub-4157365005379790/3407598215"
+      },
+      {
+        "ad_position": 1,
+        "ad_type": 3,
+        "ad_size": 100,
+        "place_id": "458552211195548_460257561025013"
+      },
+      {
+        "ad_position": 1,
+        "ad_type": 4,
+        "ad_size": 100,
+        "place_id": "458552211195548_460257481025021"
+      },
+      {
+        "ad_position": 1,
+        "ad_type": 2,
+        "ad_size": 50,
+        "place_id": "ca-app-pub-4157365005379790/3407598215"
+      },
+      {
+        "ad_position": 1,
+        "ad_type": 3,
+        "ad_size": 50,
+        "place_id": "458552211195548_460257561025013"
+      },
+      {
+        "ad_position": 1,
+        "ad_type": 4,
+        "ad_size": 50,
+        "place_id": "458552211195548_460257481025021"
+      },
+      {
+        "ad_position": 2,
+        "ad_type": 2,
+        "ad_size": 100,
+        "place_id": "ca-app-pub-4157365005379790/8066720531"
+      },
+      {
+        "ad_position": 2,
+        "ad_type": 3,
+        "ad_size": 100,
+        "place_id": "458552211195548_461962897521146"
+      },
+      {
+        "ad_position": 2,
+        "ad_type": 4,
+        "ad_size": 100,
+        "place_id": "458552211195548_461962860854483"
+      },
+      {
+        "ad_position": 2,
+        "ad_type": 2,
+        "ad_size": 50,
+        "place_id": "ca-app-pub-4157365005379790/8066720531"
+      },
+      {
+        "ad_position": 2,
+        "ad_type": 3,
+        "ad_size": 50,
+        "place_id": "458552211195548_461962897521146"
+      },
+      {
+        "ad_position": 2,
+        "ad_type": 4,
+        "ad_size": 50,
+        "place_id": "458552211195548_461962860854483"
+      },
+      {
+        "ad_position": 3,
+        "ad_type": 2,
+        "ad_size": 100,
+        "place_id": "ca-app-pub-4157365005379790/1261816645"
+      },
+      {
+        "ad_position": 3,
+        "ad_type": 3,
+        "ad_size": 100,
+        "place_id": "458552211195548_461964544187648"
+      },
+      {
+        "ad_position": 3,
+        "ad_type": 4,
+        "ad_size": 100,
+        "place_id": "458552211195548_461964850854284"
+      },
+      {
+        "ad_position": 3,
+        "ad_type": 2,
+        "ad_size": 50,
+        "place_id": "ca-app-pub-4157365005379790/1261816645"
+      },
+      {
+        "ad_position": 3,
+        "ad_type": 3,
+        "ad_size": 50,
+        "place_id": "458552211195548_461964544187648"
+      },
+      {
+        "ad_position": 3,
+        "ad_type": 4,
+        "ad_size": 50,
+        "place_id": "458552211195548_461964850854284"
+      },
+      {
+        "ad_position": 6,
+        "ad_type": 2,
+        "ad_size": 100,
+        "place_id": "ca-app-pub-4157365005379790/1261816645"
+      },
+      {
+        "ad_position": 6,
+        "ad_type": 3,
+        "ad_size": 100,
+        "place_id": "458552211195548_461964200854349"
+      },
+      {
+        "ad_position": 6,
+        "ad_type": 4,
+        "ad_size": 100,
+        "place_id": "458552211195548_460385924345510"
+      },
+      {
+        "ad_position": 6,
+        "ad_type": 2,
+        "ad_size": 50,
+        "place_id": "ca-app-pub-4157365005379790/1261816645"
+      },
+      {
+        "ad_position": 6,
+        "ad_type": 3,
+        "ad_size": 50,
+        "place_id": "458552211195548_461964200854349"
+      },
+      {
+        "ad_position": 6,
+        "ad_type": 4,
+        "ad_size": 50,
+        "place_id": "458552211195548_460385924345510"
+      }
+    ]
+  },
+  "time": "00.026045s"
+}
+

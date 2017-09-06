@@ -44,8 +44,7 @@ public abstract class BaseAdsActivity extends BaseAppActivity {
         //        requestWindowFeature(Window.FEATURE_NO_TITLE);
         //
         //        //隐藏状态栏部分（电池电量、时间等部分）
-        //        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-        //                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        //        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
     }
 
@@ -77,6 +76,10 @@ public abstract class BaseAdsActivity extends BaseAppActivity {
 
     protected void initFbAds50(String placementId) {
         initFbAds(placementId, AdSize.BANNER_HEIGHT_50);
+    }
+
+    protected void initFbAds90(String placementId) {
+        initFbAds(placementId, AdSize.BANNER_HEIGHT_90);
     }
 
     protected void initFbAds250(String placementId) {
