@@ -6,24 +6,6 @@ package com.cpxiao.crazy.aa.mode.extra;
  * @author cpxiao on 2017/6/6.
  */
 public final class Extra {
-
-    /**
-     * Intent或Bundle的name
-     */
-    public static final class Name {
-        /**
-         * 游戏模式
-         */
-        public static final String GAME_MODE = "GAME_MODE";
-
-        /**
-         * 关卡
-         */
-        public static final String LEVEL = "LEVEL";
-
-        public static final String EXTRA_NAME_IS_SUCCESS = "EXTRA_NAME_IS_SUCCESS";
-    }
-
     /**
      * SharedPreferences 的key
      */
@@ -42,19 +24,23 @@ public final class Extra {
 
     }
 
-//    /**
-//     * GameMode
-//     */
-//    public class GameMode {
-//        /**
-//         * 经典模式
-//         */
-//        public static final int CLASSIC = 1;
-//        /**
-//         * 计时模式
-//         */
-//        public static final int TIMING = 2;
-//
-//    }
+
+    /**
+     * Intent或Bundle的name
+     */
+    public static final class Name {
+        /**
+         * 游戏模式
+         */
+        public static final String GAME_MODE = "GAME_MODE";
+
+        /**
+         * 关卡
+         */
+        public static final String LEVEL = "LEVEL";
+
+        public static final String EXTRA_NAME_IS_SUCCESS = "EXTRA_NAME_IS_SUCCESS";
+    }
+
 
 }
